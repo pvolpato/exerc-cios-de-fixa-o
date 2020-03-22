@@ -1,0 +1,32 @@
+/*  Considere o diagrama UML da classe Carro, crie a estrutura dessa classe e seus métodos get e set 
+(lembre-se de criar um get e um set para cada propriedade da classe)
+
+Comentário sobre os métodos:
+
+ligarCarro( ) - esse método deve informar na tela "Carro ligado"
+desligarCarro( ) - esse método deve informar na tela "Carro desligado"
+acelerar( ) - esse método deve informar na tela "Acelerando..."
+reduzir( ) - esse método deve informar na tela "Reduzindo velocidade!"
+pararCarro( ) - esse método deve informar na tela "Carro Parado"
+setModelo( ) - esse método deve alterar/setar o modelo do carro.
+
+Construa a classe e instancie um objeto carro e obtenha a seguinte saída (teste no navegador):
+
+BMW X
+Carro Ligado
+Acelerando…
+Velocidade = 80 km/h
+Reduzindo velocidade!
+Velocidade = 40 km/h
+Carro Parado
+Velocidade = 0 km/h
+Carro Desligado */
+
+<?php
+
+class Carro{
+  public $velocidadeMaxima;
+  public $velocidadeAtual;
+}
+
+?>
