@@ -25,9 +25,9 @@ Carro Desligado */
 <?php
 
 class Carro{
-  private $modelo;
-  private $velocidadeMaxima;
-  private $velocidadeAtual;
+  public $modelo;
+  public $velocidadeMaxima;
+  public $velocidadeAtual;
 
   public function ligarCarro(){
     echo "Carro ligado";
@@ -50,36 +50,45 @@ class Carro{
     $this->modelo=$modelo;
   }
    public function setVelMax($velocidadeMaxima){
-    $this->velMax=$velocidadeMaxima;
+    $this->VelMax=$velocidadeMaxima;
   }
    public function setVelAtual($velocidadeAtual){
     $this->VelAtual=$velocidadeAtual;
   }
 
   //get
-   public function getModelo($modelo){
+   public function getModelo(){
     return $this->modelo;
   }
-   public function getVelMax($velocidadeMaxima){
-    return $this->velMax;
+   public function getVelMax(){
+    return $this->VelMax;
   }
-   public function getVelAtual($velocidadeAtual){
+   public function getVelAtual(){
     return $this->VelAtual;
   }
 }
 
-  $carro = new Carro;
-  $carro->setModelo("BMW X");
-  $carro->getModelo();
-  $carro->ligarCarro();
-  $carro->acelerar();
-  $carro->setVelMax("80 km/h");
-  $carro->getVelMax();
-  $carro->reduzir();
-  $carro->setVelAtual("40 km/h");
-  $carro->getVelAtual();
-  $carro->pararCarro();
-  $carro->setVelAtual("0 km/h");
-  $carro->getVelAtual();
+  $car = new Carro;
+  $car->setModelo("BMW X");
+  $car->setVelMax("80 km/h");
+  $car->setVelAtual("40 km/h");
+
+  echo $car->getModelo();
+  echo "\n";
+  $car->ligarCarro();
+  echo "\n";
+  $car->acelerar();
+  echo "\n";
+  echo "Velocidade = {$car->getVelMax()}";
+  echo "\n";
+  $car->reduzir();
+  echo "\n";
+  echo "Velocidade = {$car->getVelAtual()}";
+  echo "\n";
+  $car->pararCarro();
+  echo "\n";
+  echo "Velocidade = 0 km/h";
+  echo "\n";
+  $car->deligarCarro();
 
 ?>
