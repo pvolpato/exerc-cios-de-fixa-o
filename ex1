@@ -25,8 +25,61 @@ Carro Desligado */
 <?php
 
 class Carro{
-  public $velocidadeMaxima;
-  public $velocidadeAtual;
+  private $modelo;
+  private $velocidadeMaxima;
+  private $velocidadeAtual;
+
+  public function ligarCarro(){
+    echo "Carro ligado";
+  }
+  public function deligarCarro(){
+    echo "Carro desligado";
+  }
+  public function acelerar(){
+    echo "Acelerando...";
+  }
+  public function reduzir(){
+    echo "Reduzindo velocidade!";
+  }
+  public function pararCarro(){
+    echo "Carro parado.";
+  }
+
+  //set
+  public function setModelo($modelo){
+    $this->modelo=$modelo;
+  }
+   public function setVelMax($velocidadeMaxima){
+    $this->velMax=$velocidadeMaxima;
+  }
+   public function setVelAtual($velocidadeAtual){
+    $this->VelAtual=$velocidadeAtual;
+  }
+
+  //get
+   public function getModelo($modelo){
+    return $this->modelo;
+  }
+   public function getVelMax($velocidadeMaxima){
+    return $this->velMax;
+  }
+   public function getVelAtual($velocidadeAtual){
+    return $this->VelAtual;
+  }
 }
+
+  $carro = new Carro;
+  $carro->setModelo("BMW X");
+  $carro->getModelo();
+  $carro->ligarCarro();
+  $carro->acelerar();
+  $carro->setVelMax("80 km/h");
+  $carro->getVelMax();
+  $carro->reduzir();
+  $carro->setVelAtual("40 km/h");
+  $carro->getVelAtual();
+  $carro->pararCarro();
+  $carro->setVelAtual("0 km/h");
+  $carro->getVelAtual();
 
 ?>
